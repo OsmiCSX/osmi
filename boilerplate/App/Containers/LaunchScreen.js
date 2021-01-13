@@ -12,8 +12,8 @@ import styles from './Styles/LaunchScreenStyle'
 import { apply } from '../Themes/OsmiProvider'
 
 const LaunchScreen = props => {
-
   const _navigateExplore = useCallback(() => props.navigation.navigate("WelcomeScreen"), [])
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle='light-content' backgroundColor={apply('soft-secondary')} />

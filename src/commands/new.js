@@ -33,9 +33,6 @@ module.exports = {
       debug ? " --verbose" : ""
     }`
 
-
-
-
     log({ cli, osmiPath, boilerplatePath, cliString })
 
     // welcome everybody!
@@ -133,6 +130,7 @@ module.exports = {
     )
     p()
     heading("Now get cooking! 🍽")
+    p()
     osmiHeading()
   }
 }

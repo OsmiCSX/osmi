@@ -4,9 +4,10 @@ import { StatusBar, Text } from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
 
 // Styles
+import styles from './Styles/WelcomeScreenStyle'
 import { apply } from '../Themes/OsmiProvider'
 
-const WelcomeScreen = (props) => {
+const WelcomeScreen = props => {
   return (
     <SafeAreaView style={apply("flex justify-center items-center")}>
       <StatusBar barStyle='dark-content' backgroundColor={apply('white')} />
@@ -15,12 +16,12 @@ const WelcomeScreen = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
 
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  
+const mapDispatchToProps = dispatch => ({
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(WelcomeScreen)

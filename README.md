@@ -16,7 +16,7 @@ Osmi Kit include the following rock-solid technical decisions out of the box:
 - AsyncStorage
 - apisauce (to talk to REST servers)
 - Flipper-ready
-- Reactotron-ready (and pre-integrated with MST)
+- Reactotron-ready
 - TDD-ready
 - And more!
 
@@ -105,6 +105,14 @@ Contains actual images (usually png) used in your application.
 
 ### Tests
 This folder (located as a sibling to `App`) contains sample Jest snapshot and unit tests for your application.
+
+## Troubleshooting
+If you found that the boilerplate is not installer properly on your React Native proect app. Usually it's because you already install the react-native-cli globally, to solve this try to run :
+```sh
+npm uninstall -g react-native-cli
+// or
+yarn global remove react-native-cli
+```
 
 ## Special Thanks
 Special thanks to [Infinite Red](https://infinite.red/) who create such as beautiful react-native boilerplate (Ignite CLI). And give the inspiration for me to create this alternative cli and boilerplate.
