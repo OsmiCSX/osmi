@@ -1,6 +1,7 @@
 {
   "name": "OsmiKit",
   "version": "0.0.1",
+  "osmiVersion":  "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

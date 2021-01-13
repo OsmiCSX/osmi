@@ -33,6 +33,9 @@ module.exports = {
       debug ? " --verbose" : ""
     }`
 
+
+
+
     log({ cli, osmiPath, boilerplatePath, cliString })
 
     // welcome everybody!
@@ -111,7 +114,6 @@ module.exports = {
 
     // we're done! round performance stats to .xx digits
     const perfDuration = Math.round((new Date().getTime() - perfStart) / 10) / 100
-
     p()
     heading(`${yellow("Osmi CLI")} initializing ${yellow(projectName)} in ${gray(`${perfDuration}s`)}`)
     p()
