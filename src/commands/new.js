@@ -1,4 +1,3 @@
-const fs = require('fs')
 const { spawnProgress } = require("../tools/spawn")
 const { p, heading, command, direction, osmiHeading } = require("../tools/pretty")
 
@@ -34,7 +33,6 @@ module.exports = {
       debug ? " --verbose" : ""
     }`
 
-    const lockFile = () => fs.writeFileSync(process.cwd()+'/'+projectName+'/osmi.lock', '')
 
 
 
@@ -116,7 +114,6 @@ module.exports = {
 
     // we're done! round performance stats to .xx digits
     const perfDuration = Math.round((new Date().getTime() - perfStart) / 10) / 100
-    lockFile()
     p()
     heading(`${yellow("Osmi CLI")} initializing ${yellow(projectName)} in ${gray(`${perfDuration}s`)}`)
     p()
