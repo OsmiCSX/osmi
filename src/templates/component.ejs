@@ -1,0 +1,28 @@
+import React, { memo } from 'react'
+// import PropTypes from 'prop-types'
+import { View, Text } from 'react-native'
+
+// Styles
+import styles from './Styles/TestStyle'
+import { apply } from '../Themes/OsmiProvider'
+
+const <%= props.name %> = props => {
+  return (
+    <View style={styles.container}>
+      <Text><%= props.name %> Component</Text>
+    </View>
+  )
+}
+
+// // Prop type warnings
+// <%= props.name %>.propTypes = {
+//   someProperty: PropTypes.object,
+//   someSetting: PropTypes.bool.isRequired,
+// }
+//
+// // Defaults for props
+// <%= props.name %>.defaultProps = {
+//   someSetting: false
+// }
+
+export default memo(<%= props.name %>)

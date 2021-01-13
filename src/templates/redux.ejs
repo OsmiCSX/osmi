@@ -1,0 +1,47 @@
+import { createReducer, createActions } from 'reduxsauce'
+import Immutable from 'seamless-immutable'
+
+/* ------------- Types and Action Creators ------------- */
+
+const { Types, Creators } = createActions({
+  <%= props.name.toLowerCase() %>Request: ['data'],
+  <%= props.name.toLowerCase() %>Success: ['data'],
+  <%= props.name.toLowerCase() %>Failure: ['error'],
+})
+
+export const <%= props.name %>Types = Types
+export default Creators
+
+/* ------------- Initial State ------------- */
+
+export const INITIAL_STATE = Immutable({
+  <%= props.name.toLowerCase() %>Module: { data: null, fetching: false, error: null }
+})
+
+/* ------------- Selectors ------------- */
+
+export const <%= props.name %>Selectors = {
+  getData: state => state.<%= props.name.toLowerCase() %>.<%= props.name.toLowerCase() %>Module
+}
+
+/* ------------- Reducers ------------- */
+
+// request the data from an api
+export const <%= props.name.toLowerCase() %>Request = (state, { data }) =>
+  state.merge({ ...state, <%= props.name.toLowerCase() %>Module: { ...state.<%= props.name.toLowerCase() %>Module, fetching: true, error: null } })
+
+// successful api lookup
+export const <%= props.name.toLowerCase() %>Success = (state, { data }) =>
+  state.merge({ ...state, <%= props.name.toLowerCase() %>Module: { ...state.<%= props.name.toLowerCase() %>Module, data, fetching: false, error: null } })
+
+// Something went wrong somewhere.
+export const <%= props.name.toLowerCase() %>Failure = (state, { error }) =>
+  state.merge({ ...state, <%= props.name.toLowerCase() %>Module: { ...state.<%= props.name.toLowerCase() %>Module, fetching: false, error } })
+
+/* ------------- Hookup Reducers To Types ------------- */
+
+export const reducer = createReducer(INITIAL_STATE, {
+  [Types.<%= props.name.toUpperCase() %>_REQUEST]: <%= props.name.toLowerCase() %>Request,
+  [Types.<%= props.name.toUpperCase() %>_SUCCESS]: <%= props.name.toLowerCase() %>Success,
+  [Types.<%= props.name.toUpperCase() %>_FAILURE]: <%= props.name.toLowerCase() %>Failure,
+})

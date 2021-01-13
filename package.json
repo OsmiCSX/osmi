@@ -1,0 +1,63 @@
+{
+  "name": "osmi-cli",
+  "version": "1.0.0",
+  "description": "OsmiCSX ordinary boilerplate for React Native.",
+  "private": false,
+  "bin": {
+    "osmi": "bin/osmi",
+    "osmi-cli": "bin/osmi"
+  },
+  "preferGlobal": true,
+  "license": "MIT",
+  "repository": "OsmiCSX/osmi",
+  "homepage": "https://github.com/OsmiCSX/osmi",
+  "files": [
+    "boilerplate",
+    "src",
+    "bin",
+    "README.md",
+    "template.config.js"
+  ],
+  "author": {
+    "name": "OsmiCSX",
+    "url": "https://github.com/OsmiCSX/osmicsx"
+  },
+  "scripts": {
+    "format": "prettier --write **/*.{js,json} && standard --fix",
+    "lint": "standard",
+    "test": "jest",
+    "watch": "jest --watch",
+    "snapupdate": "jest --updateSnapshot",
+    "coverage": "jest --coverage"
+  },
+  "devEngines": {
+    "node": ">=12.x",
+    "npm": ">=5.x"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "gluegun": "latest",
+    "ramda": "^0.27.1",
+    "ramdasauce": "^2.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "jest": "^24.1.0",
+    "prettier": "^1.12.1",
+    "standard": "^12.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": false
+  }
+}
