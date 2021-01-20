@@ -1,46 +1,43 @@
-const { p, command, heading, warning, direction } = require("../tools/pretty")
-const { map, pipe, values } = require('ramda')
-
 /***
  *
- * @param name (is module or class name for template)
+ * @param propsInfo (is props information for template)
  * @param filename (is a filename)
  * @param toolbox
  * @returns {Promise<void>}
  */
 
-const generateContainer = async (name, filename,toolbox) => {
+const generateContainer = async (propsInfo, filename, toolbox) => {
   const { print, template: { generate } } = toolbox
 
   await generate({
     template: 'container.ejs',
     target: `App/Containers/${filename}.js`,
-    props: { name }
+    props: { ...propsInfo }
   })
   print.info(`${print.checkmark} App/Containers/${filename}.js`)
 
   await generate({
     template: 'styles.ejs',
     target: `App/Containers/Styles/${filename}Style.js`,
-    props: { name }
+    props: { ...propsInfo }
   })
   print.info(`${print.checkmark} App/Containers/Styles/${filename}Style.js`)
 }
 
-const generateComponent = async (name, filename, toolbox) => {
+const generateComponent = async (propsInfo, filename, toolbox) => {
   const { print, template: { generate } } = toolbox
 
   await generate({
     template: 'component.ejs',
     target: `App/Components/${filename}.js`,
-    props: { name }
+    props: { ...propsInfo }
   })
   print.info(`${print.checkmark} App/Components/${filename}.js`)
 
   await generate({
     template: 'styles.ejs',
     target: `App/Components/Styles/${filename}Style.js`,
-    props: { name }
+    props: { ...propsInfo }
   })
   print.info(`${print.checkmark} App/Components/Styles/${filename}Style.js`)
 }
