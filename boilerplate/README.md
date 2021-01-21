@@ -1,12 +1,7 @@
-<p align="center">
-  <a href="https://github.com/OsmiCSX/osmi-kit" target="_blank"><img width="300" src="https://i.imgur.com/iUmHt0q.png" height="354"></a><br>
-  Osmi Kit - Latest React Native Hooks Boilerplate
-</p>
+# Welcome to your new Osmi Kit App!
 
-------
-
-## Original Concept
-Original concept of this boilerplate is from (https://github.com/infinitered/ignite)[Ignite]. We're really like the project structure from Ignite Boilerplate, especially for Ignite Andross. But we realize that Infinite Red team no longer maintain for the Andross Boilerplate. So, therefore we create an alternative boilerplate like Ignite Andross.
+## The latest and greatest boilerplate for LibsCode & CloudGakkai opinions
+This is the boilerplate that [LibsCode](https://libscode.com/) and [CloudGakkai](https://cloudgakkai.dev/) uses as a way to test bleeding-edge changes to our React Native stack.
 
 ## Tech Stack
 Osmi Kit apps include the following rock-solid technical decisions out of the box:
@@ -20,23 +15,140 @@ Osmi Kit apps include the following rock-solid technical decisions out of the bo
 - TDD-ready
 
 ## Quick Start
-Prerequisites:
+The Ignite boilerplate project's structure will look similar to this:
+```
+osmi-app
+├── App
+│   ├── Components
+│   ├── Config
+│   ├── Containers
+│   ├── Fixtures
+│   ├── Images
+│   ├── Lib
+│   ├── Navigation
+│   ├── Redux
+│   ├── Sagas
+│   ├── Services
+│   ├── Themes
+├── Tests
+│   ├── Components
+│   ├── Services
+│   ├── Setup.js
+├── android
+│   ├── app
+│   ├── build.gradle
+│   ├── gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── keystores
+│   └── settings.gradle
+├── ios
+│   ├── OsmiApp
+│   ├── OsmiApp-tvOS
+│   ├── OsmiApp-tvOSTests
+│   ├── OsmiApp.xcodeproj
+│   └── OsmiAppTests
+├── index.js
+├── .babelrc
+├── .eslintrc.js
+├── .env.example
+├── .gitignore
+├── app.json
+├── babel.config.js
+├── metro.config.js
+├── package.json
+└── README.md
+```
+
+### ./App directory
+Included in an Osmi Kit boilerplate project is the app directory. This is a directory you would normally have to create when using vanilla React Native.
+
+The inside of the src directory looks similar to the following:
+```
+App
+├── Components
+├── Config
+├── Containers
+├── Fixtures
+├── Images
+├── Lib
+├── Navigation
+├── Redux
+├── Sagas
+├── Services
+└── Themes
+```
+
+**Components** This is where your React components will live. Each component will have a directory containing the `.js` file, along with a style file inside `Styles` folder. The app will come with some commonly used components like Button.
+
+**Config** This is where all of your app configuration located like Reactotron config, persist, etc.
+
+**Containers** This is where your screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.js` file, along with style file inside `Styles` folder.
+
+**Fixtures** This is where your dummy api will be located. All data stored inside `.json` file.
+
+**Images** This is where all of your local image assets will live. Store all local image asset file and register each image inside `index.js` file.
+
+**Lib** This is where your custom library will live. You can put utility tools, string converter, or any custom helper here.
+
+**Navigation** This is where your navigation will live. All of your live screens will be registered.
+
+**Redux** This is where your Redux will live.
+
+**Sagas** This is where your Sagas will live.
+
+**Services** This is where your app services will live.
+
+**Themes** This is where your app themes will live.
+
+### ./Tests directory
+This directory will hold your Jest configs and mocks, as well as your storyshots test file. This is a file that contains the `snapshots` of all your component.
+
+## Running your App
+### Prerequisites:
 - Make sure you already setup React Native environtment (Android SDK, Java, etc.)
 
-Run the CLI:
+### How to Setup
+**Step 1:** git clone this repo
+
+**Step 2:** cd to the cloned repo
+
+**Step 3:** Install the Application with `yarn install` or `npm install`
+
+**Step 4:** Run `npx pod-install` for iOS only
+
+### Run the CLI:
+1. cd to the cloned repo
+2. Run Build for either OS
+* for iOS
+    * run `npx react-native run-ios`
+* for Android
+  * run `npx react-native run-android`
+
+## :closed_lock_with_key: Secrets
+
+This project uses [react-native-config](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native. You can store API keys
+and other sensitive information in a `.env` file:
+
 ```
-git clone https://github.com/OsmiCSX/osmi-kit.git YourApp
-cd YourApp
-cp .env.example .env
-yarn install
-npx pod-install
-npx react-native run-android // run on android device
-npx react-native run-ios // run on ios devices
+API_URL=https://myapi.com
+GOOGLE_MAPS_API_KEY=abcdefgh
 ```
 
-## Contributors
-Suggestions and contributions are welcome via Pull Requests.
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars3.githubusercontent.com/u/8052370" width="100px;"/><br /><sub><b>Rully Ardiansyah</b></sub>](https://github.com/DeVoresyah)<br />[💻](https://github.com/OsmiCSX/osmi-kitcommits?author=DeVoresyah "Code") [📖](https://github.com/OsmiCSX/osmi-kitcommits?author=DeVoresyah "Documentation") [💬](#question-devoresyah "Answering Questions") [👀](#review-devoresyah "Reviewed Pull Requests") [💡](#idea-devoresyah "Idea & Concept") | [<img src="https://avatars3.githubusercontent.com/u/67543151?s=460&u=d1abfe2ce47c9b2d1c8e9721c79a424df68b9b12&v=4" width="100px;"/><br /><sub><b>Rizki Budi</b></sub>](https://github.com/rizbud)<br /> [💻](https://github.com/OsmiCSX/osmi-kitcommits?author=rizbud "Code") [💬](#question-rizbud "Answering Questions") |
-| :---: | :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+and access them from React Native like so:
+
+```
+import Secrets from 'react-native-config'
+
+Secrets.API_URL  // 'https://myapi.com'
+Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
+```
+
+The `.env` file is ignored by git keeping those secrets out of your repo.
+
+### Get started:
+1. Copy .env.example to .env
+2. Add your config variables
+3. Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
+4. Done!

@@ -3,8 +3,8 @@ import React, { memo } from 'react'
 import { View, Text } from 'react-native'
 
 // Styles
-import styles from './Styles/<%= props.name %>Style'
-import { apply } from '../Themes/OsmiProvider'
+import styles from '<%= props.stylesPath %>'
+import { apply } from '<%= props.applyPath %>'
 
 const <%= props.name %> = props => {
   return (
