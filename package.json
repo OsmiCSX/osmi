@@ -1,6 +1,6 @@
 {
   "name": "osmi-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "OsmiCSX ordinary boilerplate for React Native.",
   "private": false,
   "bin": {
