@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { StatusBar } from 'react-native'
+import { StatusBar, Platform } from 'react-native'
 import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
 import ReduxPersist from '../Config/ReduxPersist'
@@ -17,7 +17,7 @@ const RootContainer = (props) => {
   }, [])
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={[apply('flex'), Platform.OS === 'ios' && apply('-mb-2')]}>
       <StatusBar barStyle="dark-content" backgroundColor={apply('white')} />
       <AppNavigation />
     </SafeAreaView>
