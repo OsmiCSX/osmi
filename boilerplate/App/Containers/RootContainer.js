@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
 import ReduxPersist from '../Config/ReduxPersist'
 import AppNavigation from '../Navigation/AppNavigation'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 // styles
 import { apply } from '../Themes/OsmiProvider'
@@ -16,10 +17,10 @@ const RootContainer = (props) => {
   }, [])
 
   return (
-    <>
+    <SafeAreaView style={apply('flex')}>
       <StatusBar barStyle="dark-content" backgroundColor={apply('white')} />
       <AppNavigation />
-    </>
+    </SafeAreaView>
   )
 }
 
