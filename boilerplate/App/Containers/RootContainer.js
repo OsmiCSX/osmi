@@ -17,7 +17,7 @@ const RootContainer = (props) => {
   }, [])
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={apply('flex')}>
       <StatusBar barStyle="dark-content" backgroundColor={apply('white')} />
       <AppNavigation />
     </SafeAreaView>

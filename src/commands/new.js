@@ -1,5 +1,6 @@
 const { spawnProgress } = require("../tools/spawn")
 const { p, heading, command, direction, osmiHeading } = require("../tools/pretty")
+const isWindows = process.platform === "win32"
 
 module.exports = {
   run: async (toolbox) => {
@@ -29,7 +30,7 @@ module.exports = {
     const osmiPath = path(`${meta.src}`, "..")
     const boilerplatePath = path(osmiPath, "boilerplate")
     const cliEnv = process.env
-    const cliString = `npx react-native init ${projectName} --template file://${osmiPath}${
+    const cliString = `npx react-native init ${projectName} --template ${!isWindows ? 'file://' : ''}${osmiPath}${
       debug ? " --verbose" : ""
     }`
 

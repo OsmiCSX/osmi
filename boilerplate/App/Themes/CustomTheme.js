@@ -18,4 +18,7 @@ export default {
   // text color
   "text-primary": { color: "#f9bc15" },
   "text-soft-secondary": { color: "rgba(53, 73, 94, 0.5)" },
+
+  // margin
+  "-mb-2": { marginBottom: -8 },
 }
