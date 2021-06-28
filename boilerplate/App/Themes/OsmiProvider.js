@@ -1,11 +1,7 @@
-import CustomTheme from './CustomTheme' // your custom style file
-import { OsmiProvider } from 'osmicsx'
+import { OsmiProvider } from "osmicsx"
+import CustomTheme from "./CustomTheme" // your custom style file
 
-const provider = new OsmiProvider(CustomTheme);
+const provider = new OsmiProvider(CustomTheme)
 
-const { apply, connect } = provider;
-
-export {
-  apply,
-  connect
-}
+export const apply = (styles) => provider.apply(styles)
+export const connect = (styles) => provider.connect(styles)

@@ -16,7 +16,7 @@ const LaunchScreen = props => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle='light-content' backgroundColor={apply('soft-secondary')} />
+      <StatusBar barStyle='light-content' backgroundColor={apply('gray-900')} />
 
       <Image source={Images.appLogo} style={styles.appLogo} />
       <Text style={styles.title}>Welcome to Osmi Kit</Text>

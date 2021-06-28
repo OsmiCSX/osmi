@@ -21,7 +21,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "lodash": "^4.17.20",
-    "osmicsx": "^0.5.1",
+    "osmicsx": "^0.6.3",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.1",
     "react": "16.13.1",
