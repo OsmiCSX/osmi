@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import { StatusBar, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -6,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 // Styles
 import styles from './Styles/WelcomeScreenStyle'
-import { apply } from '../Themes/OsmiProvider'
+import { apply } from '@Themes/OsmiProvider'
 
 const WelcomeScreen = props => {
   return (

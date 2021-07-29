@@ -56,10 +56,10 @@ module.exports = {
           }
 
           // dynamic path
-          let reduxPath = ['Redux/YourRedux']
+          let reduxPath = ['@Redux/YourRedux']
           let stylesPath = [`Styles/${name}Style`]
-          let applyPath = ['Themes/OsmiProvider']
-          let themePath = ['../Themes/OsmiProvider']
+          let applyPath = ['@Themes/OsmiProvider']
+          let themePath = ['@Themes/OsmiProvider']
           let nameProps = name
 
           // update path if there's namespace

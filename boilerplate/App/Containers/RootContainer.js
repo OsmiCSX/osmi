@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import { connect } from 'react-redux'
-import StartupActions from '../Redux/StartupRedux'
-import ReduxPersist from '../Config/ReduxPersist'
-import AppNavigation from '../Navigation/AppNavigation'
+import StartupActions from '@Redux/StartupRedux'
+import ReduxPersist from '@Config/ReduxPersist'
+import AppNavigation from '@Navigation/AppNavigation'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 // styles
-import { apply } from '../Themes/OsmiProvider'
+import { apply } from '@Themes/OsmiProvider'
 
 const RootContainer = (props) => {
   useEffect(() => {

@@ -1,9 +1,41 @@
 {
-    "presets": ["module:metro-react-native-babel-preset"],
-    "env": {
-      "production": {
-        "plugins": ["ignite-ignore-reactotron"]
+  "presets": [
+    [
+      "module:metro-react-native-babel-preset",
+      { "useTransformReactJSXExperimental": true }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic"
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@Components": "./App/Components",
+          "@Config": "./App/Config",
+          "@Containers": "./App/Containers",
+          "@Fixtures": "./App/Fixtures",
+          "@Images": "./App/Images",
+          "@Lib": "./App/Lib",
+          "@Navigation": "./App/Navigation",
+          "@Redux": "./App/Redux",
+          "@Sagas": "./App/Sagas",
+          "@Services": "./App/Services",
+          "@Themes": "./App/Themes"
+        },
+        "extensions": [".js", ".ios.js", ".android.js"]
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["ignite-ignore-reactotron"]
     }
   }
+}
   

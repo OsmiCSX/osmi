@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es6",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./App",
+    "paths": {
+      "@Images": ["Images"],
+      "@Components/*": ["Components/*"],
+      "@Config/*": ["Config/*"],
+      "@Containers/*": ["@Containers/*"],
+      "@Fixtures/*": ["Fixtures/*"],
+      "@Images/*": ["Images/*"],
+      "@Lib/*": ["Lib/*"],
+      "@Navigation/*": ["Navigation/*"],
+      "@Redux/*": ["Redux/*"],
+      "@Sagas/*": ["Sagas/*"],
+      "@Services/*": ["Services/*"],
+      "@Themes/*": ["Themes/*"],
+    }
+  },
+  "include": ["App"],
+  "exclude": ["node_modules", "dist", "android", "ios", "Tests"]
+}

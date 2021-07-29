@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import Rehydration from '../Services/Rehydration'
-import ReduxPersist from '../Config/ReduxPersist'
-import Config from '../Config/DebugConfig'
+import Rehydration from '@Services/Rehydration'
+import ReduxPersist from '@Config/ReduxPersist'
+import Config from '@Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 import ScreenTracking from './ScreenTrackingMiddleware'
-import Reactotron from '../Config/ReactotronConfig'
+import Reactotron from '@Config/ReactotronConfig'
 
 // creates the store
 export default (rootReducer, rootSaga) => {

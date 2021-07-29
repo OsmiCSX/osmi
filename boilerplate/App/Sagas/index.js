@@ -1,11 +1,11 @@
 import { takeLatest, all } from 'redux-saga/effects'
-import API from '../Services/Api'
-import FixtureAPI from '../Services/FixtureApi'
-import DebugConfig from '../Config/DebugConfig'
+import API from '@Services/Api'
+import FixtureAPI from '@Services/FixtureApi'
+import DebugConfig from '@Config/DebugConfig'
 
 /* ------------- Types ------------- */
-import { StartupTypes } from '../Redux/StartupRedux'
-import { StaticDataTypes } from '../Redux/StaticDataRedux'
+import { StartupTypes } from '@Redux/StartupRedux'
+import { StaticDataTypes } from '@Redux/StaticDataRedux'
 
 /* ------------- Sagas ------------- */
 import { startup } from './StartupSagas'

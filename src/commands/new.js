@@ -88,9 +88,15 @@ module.exports = {
     packageJsonRaw = packageJsonRaw
       .replace(/OsmiKit/g, projectName)
       .replace(/osmi-kit/g, projectNameKebab)
+    
     let packageJson = JSON.parse(packageJsonRaw)
-
     filesystem.write("package.json", packageJson)
+
+    let persistConfigRaw = filesystem.read("App/Config/ReduxPersist.js")
+    persistConfigRaw = persistConfigRaw
+      .replace(/osmi-kit/g, projectNameKebab)
+
+    filesystem.write("App/Config/ReduxPersist.js", persistConfigRaw)
 
     // install pods
     p(`☕️ Baking CocoaPods`)
@@ -102,7 +108,10 @@ module.exports = {
       await system.run(
         log(`
           rm -rf ./.git
-          git init;
+          git init
+          git checkout -b main
+          git add .
+          git commit -m "first commit :rocket:";
         `),
       )
     }

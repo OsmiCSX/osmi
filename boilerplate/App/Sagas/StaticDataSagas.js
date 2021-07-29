@@ -1,5 +1,5 @@
 import { call, put, select } from 'redux-saga/effects'
-import StaticDataActions from '../Redux/StaticDataRedux'
+import StaticDataActions from '@Redux/StaticDataRedux'
 
 export function * getRoot (api, action) {
   const { data } = action

@@ -1,11 +1,11 @@
-import immutablePersistenceTransform from '../Services/ImmutablePersistenceTransform'
+import immutablePersistenceTransform from '@Services/ImmutablePersistenceTransform'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const REDUX_PERSIST = {
   active: true,
   reducerVersion: '1.0',
   storeConfig: {
-    key: 'maupesan',
+    key: 'osmi-kit',
     storage: AsyncStorage,
     // Reducer keys that you do NOT want stored to persistence here.
     blacklist: ['login', 'search', 'nav'],

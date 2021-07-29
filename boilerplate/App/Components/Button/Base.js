@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import PropTypes from 'prop-types'
 import {
   TouchableNativeFeedback,
@@ -8,8 +8,8 @@ import {
 } from 'react-native'
 
 // Styles
-import styles from './Styles/ButtonStyle'
-import { apply } from '../Themes/OsmiProvider'
+import styles from '../Styles/BaseStyle'
+import { apply } from '@Themes/OsmiProvider'
 
 const Button = props => {
   const { ...restProps } = props

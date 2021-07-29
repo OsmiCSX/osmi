@@ -1,15 +1,15 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import { connect } from 'react-redux'
-import { StatusBar, Image, View, Text } from 'react-native'
+import { StatusBar, Image, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Images from '../Images'
+import Images from '@Images'
 
 // Components
-import Button from '../Components/Button'
+import Button from '@Components/Button/Base'
 
 // Styles
 import styles from './Styles/LaunchScreenStyle'
-import { apply } from '../Themes/OsmiProvider'
+import { apply } from '@Themes/OsmiProvider'
 
 const LaunchScreen = props => {
   const _navigateExplore = useCallback(() => props.navigation.navigate("WelcomeScreen"), [])

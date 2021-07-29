@@ -2,8 +2,8 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import LaunchScreen from '../Containers/LaunchScreen'
-import WelcomeScreen from '../Containers/WelcomeScreen'
+import LaunchScreen from '@Containers/LaunchScreen'
+import WelcomeScreen from '@Containers/WelcomeScreen'
 
 const Stack = createStackNavigator()
 

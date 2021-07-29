@@ -1,4 +1,4 @@
-import { connect } from '../../Themes/OsmiProvider'
+import { connect } from '@Themes/OsmiProvider'
 
 export default connect({
   container: 'flex bg-gray-900 items-center p-5',
