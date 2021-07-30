@@ -67,29 +67,20 @@ module.exports = {
             const splitNamespace = name.split('/')
             nameProps = splitNamespace[splitNamespace.length - 1]
 
-            splitNamespace.forEach(() => {
-              reduxPath.unshift('..')
-              applyPath.unshift('..')
-              themePath.unshift('..')
-            })
-
             for (let i=0; i < splitNamespace.length - 1; i++) {
               stylesPath.unshift('..')
             }
           } else {
             // default path if no namespace
-            reduxPath.unshift('..')
-            applyPath.unshift('..')
             stylesPath.unshift('.')
-            themePath.unshift('..')
           }
 
           // create props info for generator
           const propsInfo = {
-            reduxPath: reduxPath.join('/'),
+            reduxPath,
             stylesPath: stylesPath.join('/'),
-            applyPath: applyPath.join('/'),
-            themePath: themePath.join('/'),
+            applyPath,
+            themePath,
             name: nameProps
           }
 
